@@ -28,6 +28,8 @@
 
 <body>
 
+    <canvas id="code-rain" aria-hidden="true"></canvas>
+
     <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-container">
@@ -44,14 +46,21 @@
 </a>
 
             <nav class="nav-menu">
-                <a href="#home">Ana Sayfa</a>
-                <a href="#about">Hakkımda</a>
-                <a href="#skills">Yetenekler</a>
-                <a href="#projects">Projeler</a>
-                <a href="#contact">İletişim</a>
+                <a href="#home" data-i18n="nav.home">Ana Sayfa</a>
+                <a href="#about" data-i18n="nav.about">Hakkımda</a>
+                <a href="#skills" data-i18n="nav.skills">Yetenekler</a>
+                <a href="#services" data-i18n="nav.services">Hizmetler</a>
+                <a href="#projects" data-i18n="nav.projects">Projeler</a>
+                <a href="#social-media" data-i18n="nav.social">Sosyal Medya</a>
+                <a href="#contact" data-i18n="nav.contact">İletişim</a>
             </nav>
 
-            <a href="#contact" class="nav-button">
+            <div class="lang-switcher" aria-label="Dil seçimi">
+                <button class="lang-btn active" type="button" data-lang="tr" aria-pressed="true">TR</button>
+                <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+
+            <a href="#contact" class="nav-button" data-i18n="nav.cta">
                 İletişime Geç
             </a>
 
@@ -75,7 +84,7 @@
             alt="Emirhan Vardar"
         >
 
-        <p class="hero-small">
+        <p class="hero-small" data-i18n="hero.greeting">
             MERHABA, BEN
         </p>
 
@@ -85,11 +94,11 @@
         Emirhan <span>Vardar</span>
     </h1>
 
-                    <h2>
+                    <h2 data-i18n="hero.role">
                         Yazılım Geliştirici & Tasarımcı
                     </h2>
 
-                    <p class="hero-description">
+                    <p class="hero-description" data-i18n="hero.bio">
                         Selam, ben Emirhan VARDAR. İstanbul'da yaşıyorum ve dijital platformlarda genellikle “Hangaron” kullanıcı adıyla tanınıyorum.
 
 Okan Üniversitesi 2024-2026 Bilgisayar Destekli Tasarım ve Animasyon Bölümü mezunuyum. Bilişim sektörüne 2015 yılından beri aşinayım. Resmî eğitim sürecime ise 2016-2017 yılları arasında başladım.
@@ -99,11 +108,11 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
 
                     <div class="hero-buttons">
 
-                        <a href="#projects" class="primary-button">
+                        <a href="#projects" class="primary-button" data-i18n="hero.viewProjects">
                             Projelerimi Gör
                         </a>
 
-                        <a href="#contact" class="secondary-button">
+                        <a href="#contact" class="secondary-button" data-i18n="hero.contactMe">
                             Benimle İletişime Geç
                         </a>
 
@@ -116,6 +125,7 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
                             target="_blank"
                             rel="noopener noreferrer"
                         >
+                            <i class="fa-brands fa-github"></i>
                             GitHub
                         </a>
 
@@ -124,6 +134,7 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
                             target="_blank"
                             rel="noopener noreferrer"
                         >
+                            <i class="fa-brands fa-linkedin"></i>
                             LinkedIn
                         </a>
 
@@ -132,6 +143,7 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
                             target="_blank"
                             rel="noopener noreferrer"
                         >
+                            <i class="fa-brands fa-behance"></i>
                             Behance
                         </a>
 
@@ -204,9 +216,9 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
 
                 <div class="section-title">
 
-                    <p>01 — HAKKIMDA</p>
+                    <p data-i18n="about.label">01 — HAKKIMDA</p>
 
-                    <h2>
+                    <h2 data-i18n="about.title">
                         Biraz <span>Ben</span>
                     </h2>
 
@@ -217,22 +229,22 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
 
                     <div class="about-text">
 
-                        <h3>
+                        <h3 data-i18n="about.heading">
                             Merhaba, ben Emirhan Vardar.
                         </h3>
 
-                        <p>
+                        <p data-i18n="about.p1">
                             Teknoloji, yazılım ve dijital tasarım alanlarına
                             ilgi duyan bir geliştiriciyim.
                         </p>
 
-                        <p>
+                        <p data-i18n="about.p2">
                             Farklı teknolojiler kullanarak web projeleri,
                             masaüstü uygulamaları, oyunlar ve çeşitli
                             dijital projeler geliştirmeyi seviyorum.
                         </p>
 
-                        <p>
+                        <p data-i18n="about.p3">
                             Öğrenmeye, yeni teknolojileri keşfetmeye ve
                             fikirleri çalışan projelere dönüştürmeye
                             odaklanıyorum.
@@ -244,22 +256,22 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
                     <div class="about-info">
 
                         <div class="info-item">
-                            <span>Ad Soyad</span>
+                            <span data-i18n="about.fullNameLabel">Ad Soyad</span>
                             <strong>Emirhan Vardar</strong>
                         </div>
 
                         <div class="info-item">
-                            <span>Uzmanlık Alanı</span>
-                            <strong>Software Development</strong>
+                            <span data-i18n="about.specialtyLabel">Uzmanlık Alanı</span>
+                            <strong data-i18n="about.specialtyValue">Software Development</strong>
                         </div>
 
                         <div class="info-item">
-                            <span>Konum</span>
-                            <strong>İstanbul, Türkiye</strong>
+                            <span data-i18n="about.locationLabel">Konum</span>
+                            <strong data-i18n="about.locationValue">İstanbul, Türkiye</strong>
                         </div>
 
                         <div class="info-item">
-                            <span>E-posta</span>
+                            <span data-i18n="about.emailLabel">E-posta</span>
                             <strong>emirhanvardar96@gmail.com</strong>
                         </div>
 
@@ -279,9 +291,9 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
 
                 <div class="section-title">
 
-                    <p>02 — YETENEKLER</p>
+                    <p data-i18n="skills.label">02 — YETENEKLER</p>
 
-                    <h2>
+                    <h2 data-i18n="skills.title">
                         Kullandığım <span>Teknolojiler</span>
                     </h2>
 
@@ -292,8 +304,8 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
 
                     <div class="skill-card">
                         <div class="skill-icon">&lt;/&gt;</div>
-                        <h3>Web Development</h3>
-                        <p>
+                        <h3 data-i18n="skills.web.title">Web Development</h3>
+                        <p data-i18n="skills.web.text">
                             HTML, CSS, JavaScript, React ve modern web
                             teknolojileri.
                         </p>
@@ -302,8 +314,8 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
 
                     <div class="skill-card">
                         <div class="skill-icon">{ }</div>
-                        <h3>Programming</h3>
-                        <p>
+                        <h3 data-i18n="skills.programming.title">Programming</h3>
+                        <p data-i18n="skills.programming.text">
                             C#, Python, JavaScript ve farklı programlama
                             dilleri.
                         </p>
@@ -312,8 +324,8 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
 
                     <div class="skill-card">
                         <div class="skill-icon">◈</div>
-                        <h3>Game Development</h3>
-                        <p>
+                        <h3 data-i18n="skills.game.title">Game Development</h3>
+                        <p data-i18n="skills.game.text">
                             Unity ve çeşitli oyun geliştirme teknolojileri
                             ile projeler.
                         </p>
@@ -322,12 +334,109 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
 
                     <div class="skill-card">
                         <div class="skill-icon">◆</div>
-                        <h3>Design</h3>
-                        <p>
+                        <h3 data-i18n="skills.design.title">Design</h3>
+                        <p data-i18n="skills.design.text">
                             Photoshop, Illustrator, Blender ve dijital
                             tasarım araçları.
                         </p>
                     </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+        <section id="services" class="section section-dark">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <p data-i18n="services.label">03 — HİZMETLER</p>
+
+                    <h2 data-i18n="services.title">
+                        Sunduğum <span>Hizmetler</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                        <div>
+                            <span class="service-number">01</span>
+                            <h3 data-i18n="services.webDesign.title">Web Sitesi Tasarımı</h3>
+                            <p data-i18n="services.webDesign.text">Markanıza özel, modern ve mobil uyumlu web siteleri.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div>
+                            <span class="service-number">02</span>
+                            <h3 data-i18n="services.dashboard.title">Yönetim Panelleri</h3>
+                            <p data-i18n="services.dashboard.text">İş süreçlerinizi kolaylaştıran pratik yönetim arayüzleri.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-brands fa-discord"></i></div>
+                        <div>
+                            <span class="service-number">03</span>
+                            <h3 data-i18n="services.discord.title">Discord Botları</h3>
+                            <p data-i18n="services.discord.text">Topluluklarınız için özel komut ve moderasyon botları.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-brands fa-telegram"></i></div>
+                        <div>
+                            <span class="service-number">04</span>
+                            <h3 data-i18n="services.telegram.title">Telegram Botları</h3>
+                            <p data-i18n="services.telegram.text">Bildirim, destek ve otomasyon ihtiyaçlarına özel botlar.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+                        <div>
+                            <span class="service-number">05</span>
+                            <h3 data-i18n="services.automation.title">Otomasyon Sistemleri</h3>
+                            <p data-i18n="services.automation.text">Tekrarlanan görevleri azaltan akıllı ve verimli sistemler.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                        <div>
+                            <span class="service-number">06</span>
+                            <h3 data-i18n="services.graphic.title">Grafik Tasarımı</h3>
+                            <p data-i18n="services.graphic.text">Dijital projeleriniz için özgün görsel kimlik ve tasarımlar.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-film"></i></div>
+                        <div>
+                            <span class="service-number">07</span>
+                            <h3 data-i18n="services.video.title">Video Kurgu Eğitimi</h3>
+                            <p data-i18n="services.video.text">Kurgu tekniklerini uygulamalı ve anlaşılır şekilde öğrenin.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                        <div>
+                            <span class="service-number">08</span>
+                            <h3 data-i18n="services.custom.title">Özel Yazılım</h3>
+                            <p data-i18n="services.custom.text">İhtiyaçlarınıza göre planlanan ölçeklenebilir yazılım çözümleri.</p>
+                        </div>
+                    </article>
 
                 </div>
 
@@ -343,9 +452,9 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
 
                 <div class="section-title">
 
-                    <p>03 — PROJELER</p>
+                    <p data-i18n="projects.label">04 — PROJELER</p>
 
-                    <h2>
+                    <h2 data-i18n="projects.title">
                         Son <span>Çalışmalarım</span>
                     </h2>
 
@@ -371,15 +480,15 @@ Kendimi özellikle teknoloji, dijital tasarım, yazılım ve yaratıcı projeler
 
                         <div class="project-content">
 
-                            <span class="project-category">
+                            <span class="project-category" data-i18n="projects.jarvis.category">
                                 SOFTWARE
                             </span>
 
-                            <h3>
+                            <h3 data-i18n="projects.jarvis.title">
                                 Jarvis Projesi
                             </h3>
 
-                            <p>
+                            <p data-i18n="projects.jarvis.text">
                                 J.A.R.V.I.S. Core Dashboard, tamamen açık kaynak kodlu olarak geliştirilen, HTML5, CSS3 ve JavaScript teknolojileri üzerine inşa edilmiş siberpunk temalı bir yapay zeka asistanıdır.
 
 Google Gemini entegrasyonu, sesli komut desteği ve isteğe bağlı Python Desktop Bridge sistemi sayesinde hem yapay zeka sohbetleri gerçekleştirebilir hem de bilgisayarınızdaki uygulamaları sesli komutlarla kontrol edebilirsiniz.
@@ -400,8 +509,9 @@ Bu proje, modern fütüristik kullanıcı arayüzleri ve yapay zeka teknolojiler
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="project-link"
+                                data-i18n="projects.viewProject"
                             >
-                                GitHub →
+                                Projeyi İncele →
                             </a>
 
                         </div>
@@ -425,15 +535,15 @@ Bu proje, modern fütüristik kullanıcı arayüzleri ve yapay zeka teknolojiler
 
                         <div class="project-content">
 
-                            <span class="project-category">
+                            <span class="project-category" data-i18n="projects.kazun.category">
                                 Board Game
                             </span>
 
-                            <h3>
+                            <h3 data-i18n="projects.kazun.title">
                                Kazun: Hodri Meydan - Kutu Oyunu Projesi
                             </h3>
 
-                            <p>
+                            <p data-i18n="projects.kazun.text">
                                 Kazun: Hodri Meydan, Osmanlı esintileri taşıyan fantastik bir evrende geçen strateji tabanlı bir kutu oyunu konseptidir. 
                                 Oyuncular; Padişah, Yeniçeri, Pehlivan Demir ve Gölge Hançer gibi karakterleri kontrol ederek üstünlük mücadelesi verir. 
                                 Proje kapsamında oyun kartları, karakter tasarımları, oyun tahtası, logo çalışmaları ve konsept görseller hazırlanmıştır. 
@@ -452,8 +562,9 @@ Bu proje, modern fütüristik kullanıcı arayüzleri ve yapay zeka teknolojiler
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="project-link"
+                                data-i18n="projects.viewProject"
                             >
-                                Behance →
+                                Projeyi İncele →
                             </a>
 
                         </div>
@@ -477,15 +588,15 @@ Bu proje, modern fütüristik kullanıcı arayüzleri ve yapay zeka teknolojiler
 
                         <div class="project-content">
 
-                            <span class="project-category">
+                            <span class="project-category" data-i18n="projects.docker.category">
                                 Docker & Python
                             </span>
 
-                            <h3>
+                            <h3 data-i18n="projects.docker.title">
                                 Docker Security & Protocol Laboratory
                             </h3>
 
-                            <p>
+                            <p data-i18n="projects.docker.text">
                                 Bu depo, 
                                 modern şifreleme algoritmalarının (AES, RSA, ECC) ve
                                  endüstriyel/ağ protokollerinin (MQTT, Modbus, SSH, Telnet) Docker konteynerleri içerisinde izole edilmiş uygulamalarını içerir.
@@ -502,14 +613,94 @@ Bu proje, modern fütüristik kullanıcı arayüzleri ve yapay zeka teknolojiler
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="project-link"
+                                data-i18n="projects.viewProject"
                             >
-                                GitHub →
+                                Projeyi İncele →
                             </a>
 
                         </div>
 
                     </article>
 
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOCIAL MEDIA -->
+        <section id="social-media" class="section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <p data-i18n="social.label">05 — SOSYAL MEDYA</p>
+
+                    <h2 data-i18n="social.title">
+                        Sosyal Medya <span>Hesaplarım</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="social-media-grid">
+
+                    <a href="https://www.youtube.com/@HangaronOfficial" target="_blank" rel="noopener noreferrer" class="social-media-card">
+                        <span class="social-media-icon"><i class="fa-brands fa-youtube"></i></span>
+                        <span class="social-media-details">
+                            <strong>YouTube</strong>
+                            <small>Videolar ve içerikler</small>
+                        </span>
+                        <span class="social-media-arrow">↗</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/emirhan_vardar/" target="_blank" rel="noopener noreferrer" class="social-media-card">
+                        <span class="social-media-icon"><i class="fa-brands fa-instagram"></i></span>
+                        <span class="social-media-details">
+                            <strong>Instagram</strong>
+                            <small>Güncel paylaşımlar</small>
+                        </span>
+                        <span class="social-media-arrow">↗</span>
+                    </a>
+
+                    <a href="https://kick.com/Hangaronn" target="_blank" rel="noopener noreferrer" class="social-media-card">
+                        <span class="social-media-icon"><i class="fa-solid fa-play"></i></span>
+                        <span class="social-media-details">
+                            <strong>Kick</strong>
+                            <small>Canlı yayınlar</small>
+                        </span>
+                        <span class="social-media-arrow">↗</span>
+                    </a>
+
+                    <a href="https://github.com/Hangaron" target="_blank" rel="noopener noreferrer" class="social-media-card">
+                        <span class="social-media-icon"><i class="fa-brands fa-github"></i></span>
+                        <span class="social-media-details">
+                            <strong>GitHub</strong>
+                            <small>Projeler ve kodlar</small>
+                        </span>
+                        <span class="social-media-arrow">↗</span>
+                    </a>
+
+                    <a href="https://www.behance.net/emirhanvardar1" target="_blank" rel="noopener noreferrer" class="social-media-card">
+                        <span class="social-media-icon"><i class="fa-brands fa-behance"></i></span>
+                        <span class="social-media-details">
+                            <strong>Behance</strong>
+                            <small>Tasarım çalışmalarım</small>
+                        </span>
+                        <span class="social-media-arrow">↗</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/emirhanvardar0/" target="_blank" rel="noopener noreferrer" class="social-media-card">
+                        <span class="social-media-icon"><i class="fa-brands fa-linkedin"></i></span>
+                        <span class="social-media-details">
+                            <strong>LinkedIn</strong>
+                            <small>Profesyonel profilim</small>
+                        </span>
+                        <span class="social-media-arrow">↗</span>
+                    </a>
 
                 </div>
 
@@ -525,9 +716,9 @@ Bu proje, modern fütüristik kullanıcı arayüzleri ve yapay zeka teknolojiler
 
                 <div class="section-title">
 
-                    <p>04 — İLETİŞİM</p>
+                    <p data-i18n="contact.label">06 — İLETİŞİM</p>
 
-                    <h2>
+                    <h2 data-i18n="contact.title">
                         Benimle <span>İletişime Geç</span>
                     </h2>
 
@@ -538,11 +729,11 @@ Bu proje, modern fütüristik kullanıcı arayüzleri ve yapay zeka teknolojiler
 
                     <div class="contact-text">
 
-                        <h3>
+                        <h3 data-i18n="contact.heading">
                             Bir projen mi var?
                         </h3>
 
-                        <p>
+                        <p data-i18n="contact.text">
                             Bir proje, iş fırsatı veya sadece iletişim
                             kurmak için bana e-posta gönderebilirsin.
                         </p>
@@ -631,7 +822,7 @@ Bu proje, modern fütüristik kullanıcı arayüzleri ve yapay zeka teknolojiler
 
         <div class="container footer-container">
 
-            <p>
+            <p data-i18n="footer.text">
                 © 2026 Emirhan Vardar. Tüm hakları saklıdır.
             </p>
 
