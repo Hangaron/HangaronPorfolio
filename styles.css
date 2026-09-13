@@ -191,16 +191,23 @@ img {
 
 .nav-menu {
     display: flex;
-    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    gap: clamp(16px, 2.2vw, 32px);
 }
 
 .nav-menu a {
     position: relative;
 
+    white-space: nowrap;
+
     color: var(--text-secondary);
 
     font-size: 14px;
     font-weight: 500;
+
+    line-height: 1.2;
 
     padding: 8px 0;
 
@@ -382,6 +389,11 @@ img {
     margin-bottom: 35px;
 }
 
+.hero-content {
+    width: 100%;
+    max-width: 620px;
+}
+
 
 /* =========================================
    BUTTONS
@@ -390,20 +402,25 @@ img {
 .hero-buttons {
     display: flex;
 
-    gap: 15px;
+    align-items: center;
+    gap: 12px;
 
     margin-bottom: 35px;
 }
 
 .primary-button,
 .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
     padding: 14px 24px;
 
     font-size: 14px;
 
     font-weight: 600;
 
-    transition: 0.3s;   
+    transition: 0.3s;
 
     border-radius: 14px;
 }
@@ -421,12 +438,13 @@ img {
 }
 
 .secondary-button {
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
     color: #fff;
 }
 
 .secondary-button:hover {
+    background: rgba(255, 107, 0, 0.08);
     border-color: var(--accent);
 
     color: var(--accent);
@@ -435,7 +453,9 @@ img {
 .social-links {
     display: flex;
 
-    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 24px;
 }
 
 .social-links a {
@@ -1197,10 +1217,12 @@ img {
 
     .hero-buttons {
         flex-direction: column;
+        align-items: stretch;
     }
 
     .primary-button,
     .secondary-button {
+        width: 100%;
         text-align: center;
     }
 
